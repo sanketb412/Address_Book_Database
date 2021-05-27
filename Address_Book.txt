@@ -29,3 +29,34 @@ mysql> SELECT DATABASE();
 +-----------------------+
 1 row in set (0.00 sec)
 
+-----------------------------# UC2: #-------------------------------------
+mysql> CREATE TABLE Address_Book_Table
+    -> (
+    -> id                       INT unsigned NOT NULL AUTO_INCREMENT,
+    -> First_Name               VARCHAR(150) NOT NULL,
+    -> Last_Name                VARCHAR(150) NOT NULL,
+    -> Address                  VARCHAR(150) NOT NULL,
+    -> City                     VARCHAR(150) NOT NULL,
+    -> State                    VARCHAR(150) NOT NULL,
+    -> zip                      INT unsigned NOT NULL,
+    -> Phone_Number             INT unsigned NOT NULL,
+    -> Email                    VARCHAR(150) NOT NULL,
+    -> PRIMARY KEY              (id)
+    -> );
+Query OK, 0 rows affected (1.05 sec)
+
+mysql> DESCRIBE Address_Book_Table;
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| id           | int unsigned | NO   | PRI | NULL    | auto_increment |
+| First_Name   | varchar(150) | NO   |     | NULL    |                |
+| Last_Name    | varchar(150) | NO   |     | NULL    |                |
+| Address      | varchar(150) | NO   |     | NULL    |                |
+| City         | varchar(150) | NO   |     | NULL    |                |
+| State        | varchar(150) | NO   |     | NULL    |                |
+| zip          | int unsigned | NO   |     | NULL    |                |
+| Phone_Number | int unsigned | NO   |     | NULL    |                |
+| Email        | varchar(150) | NO   |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+9 rows in set (0.11 sec)
