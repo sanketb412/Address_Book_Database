@@ -93,3 +93,16 @@ mysql> SELECT * FROM AddressBookTables;
 |  3 | Karan      | Kapoor    | Kamti   | Nagpur | Maharashtra | 400050 | 9865885214   | kkaran@gmail.com      |
 +----+------------+-----------+---------+--------+-------------+--------+--------------+-----------------------+
 3 rows in set (0.01 sec)
+
+------------------------------------# UC5: #----------------------------------------------------------------------------
+mysql> DELETE FROM AddressBookTables WHERE FIRST_NAME = 'Sanket';
+Query OK, 1 row affected (0.07 sec)
+
+mysql> SELECT * FROM AddressBookTables;
++----+------------+-----------+---------+--------+-------------+--------+--------------+------------------+
+| id | FIRST_NAME | LAST_NAME | Address | City   | State       | Zip    | Phone_Number | Email            |
++----+------------+-----------+---------+--------+-------------+--------+--------------+------------------+
+|  2 | Sam        | Roy       | Nahur   | Mumbai | Maharashtra | 400079 | 9865789625   | roySam@gmail.com |
+|  3 | Karan      | Kapoor    | Kamti   | Nagpur | Maharashtra | 400050 | 9865885214   | kkaran@gmail.com |
++----+------------+-----------+---------+--------+-------------+--------+--------------+------------------+
+2 rows in set (0.01 sec)
