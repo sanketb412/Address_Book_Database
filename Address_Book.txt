@@ -108,19 +108,20 @@ mysql> SELECT * FROM AddressBookTables;
 2 rows in set (0.01 sec)
 
 ------------------------------------# UC6: #----------------------------------------------------------------------------
-mysql> SELECT FIRST_NAME FROM AddressBookTables WHERE City = 'Mumbai' GROUP BY CITY;
+mysql> SELECT FIRST_NAME FROM AddressBookTables WHERE City = 'Mumbai';
 +------------+
 | FIRST_NAME |
 +------------+
 | Sam        |
+| Sanket     |
 +------------+
-1 row in set (0.00 sec)
+2 rows in set (0.00 sec)
 
-mysql> SELECT FIRST_NAME FROM AddressBookTables WHERE State = 'Maharashtra' GROUP BY CITY;
+mysql> SELECT FIRST_NAME FROM AddressBookTables WHERE State = 'Maharashtra';
 +------------+
 | FIRST_NAME |
 +------------+
 | Sam        |
 | Karan      |
+| Sanket     |
 +------------+
-2 rows in set (0.01 sec)
