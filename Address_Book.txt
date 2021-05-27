@@ -125,3 +125,12 @@ mysql> SELECT FIRST_NAME FROM AddressBookTables WHERE State = 'Maharashtra';
 | Karan      |
 | Sanket     |
 +------------+
+
+------------------------------------# UC7: #----------------------------------------------------------------------------
+mysql> SELECT  COUNT(City), COUNT(State) FROM AddressBookTables;
++-------------+--------------+
+| COUNT(City) | COUNT(State) |
++-------------+--------------+
+|           3 |            3 |
++-------------+--------------+
+1 row in set (0.00 sec)
