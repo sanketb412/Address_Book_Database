@@ -106,3 +106,21 @@ mysql> SELECT * FROM AddressBookTables;
 |  3 | Karan      | Kapoor    | Kamti   | Nagpur | Maharashtra | 400050 | 9865885214   | kkaran@gmail.com |
 +----+------------+-----------+---------+--------+-------------+--------+--------------+------------------+
 2 rows in set (0.01 sec)
+
+------------------------------------# UC6: #----------------------------------------------------------------------------
+mysql> SELECT FIRST_NAME FROM AddressBookTables WHERE City = 'Mumbai' GROUP BY CITY;
++------------+
+| FIRST_NAME |
++------------+
+| Sam        |
++------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT FIRST_NAME FROM AddressBookTables WHERE State = 'Maharashtra' GROUP BY CITY;
++------------+
+| FIRST_NAME |
++------------+
+| Sam        |
+| Karan      |
++------------+
+2 rows in set (0.01 sec)
