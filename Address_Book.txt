@@ -204,3 +204,13 @@ mysql> SELECT FIRST_NAME, LAST_NAME FROM AddressBookTables WHERE Type = 'Friends
 | Sanket     | Bagde     |
 +------------+-----------+
 2 rows in set (0.00 sec)
+
+------------------------------------# UC10: #----------------------------------------------------------------------------
+mysql> SELECT Phone_Number FROM AddressBookTables WHERE Type = 'Friends';
++--------------+
+| Phone_Number |
++--------------+
+| 9865885214   |
+| 8654885425   |
++--------------+
+2 rows in set (0.00 sec)
