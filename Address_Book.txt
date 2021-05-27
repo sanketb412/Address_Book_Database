@@ -61,7 +61,7 @@ mysql> DESCRIBE AddressBookTables;
 +--------------+--------------+------+-----+---------+----------------+
 9 rows in set (0.06 sec)
 
------------------------------# UC3: #-------------------------------------
+------------------------------------# UC3: #---------------------------------------------------------------------------
 mysql> INSERT INTO AddressBookTables (FIRST_NAME, LAST_NAME, Address, City, State, Zip, Phone_Number, Email) VALUES
     -> ('Sanket','Bagde','Mulund','Mumbai','Maharashtra',400080,'8654885425','sanketbagde@gmail.com'),
     -> ('Sam','Roy','Bhandup','Mumbai','Maharashtra',400079,'9865789625','roySam@gmail.com'),
@@ -78,3 +78,18 @@ mysql> SELECT * FROM AddressBookTables;
 |  3 | Karan      | Kapoor    | Kamti   | Nagpur | Maharashtra | 400050 | 9865885214   | kkaran@gmail.com      |
 +----+------------+-----------+---------+--------+-------------+--------+--------------+-----------------------+
 3 rows in set (0.02 sec)
+
+------------------------------------# UC4: #----------------------------------------------------------------------------
+mysql> update AddressBookTables set Address = 'Nahur' where FIRST_NAME = 'Sam';
+Query OK, 1 row affected (0.10 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM AddressBookTables;
++----+------------+-----------+---------+--------+-------------+--------+--------------+-----------------------+
+| id | FIRST_NAME | LAST_NAME | Address | City   | State       | Zip    | Phone_Number | Email                 |
++----+------------+-----------+---------+--------+-------------+--------+--------------+-----------------------+
+|  1 | Sanket     | Bagde     | Mulund  | Mumbai | Maharashtra | 400080 | 8654885425   | sanketbagde@gmail.com |
+|  2 | Sam        | Roy       | Nahur   | Mumbai | Maharashtra | 400079 | 9865789625   | roySam@gmail.com      |
+|  3 | Karan      | Kapoor    | Kamti   | Nagpur | Maharashtra | 400050 | 9865885214   | kkaran@gmail.com      |
++----+------------+-----------+---------+--------+-------------+--------+--------------+-----------------------+
+3 rows in set (0.01 sec)
