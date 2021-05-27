@@ -60,3 +60,21 @@ mysql> DESCRIBE AddressBookTables;
 | Email        | varchar(100) | NO   |     | NULL    |                |
 +--------------+--------------+------+-----+---------+----------------+
 9 rows in set (0.06 sec)
+
+-----------------------------# UC3: #-------------------------------------
+mysql> INSERT INTO AddressBookTables (FIRST_NAME, LAST_NAME, Address, City, State, Zip, Phone_Number, Email) VALUES
+    -> ('Sanket','Bagde','Mulund','Mumbai','Maharashtra',400080,'8654885425','sanketbagde@gmail.com'),
+    -> ('Sam','Roy','Bhandup','Mumbai','Maharashtra',400079,'9865789625','roySam@gmail.com'),
+    -> ('Karan','Kapoor','Kamti','Nagpur','Maharashtra',400050,'9865885214','kkaran@gmail.com');
+Query OK, 3 rows affected (0.08 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM AddressBookTables;
++----+------------+-----------+---------+--------+-------------+--------+--------------+-----------------------+
+| id | FIRST_NAME | LAST_NAME | Address | City   | State       | Zip    | Phone_Number | Email                 |
++----+------------+-----------+---------+--------+-------------+--------+--------------+-----------------------+
+|  1 | Sanket     | Bagde     | Mulund  | Mumbai | Maharashtra | 400080 | 8654885425   | sanketbagde@gmail.com |
+|  2 | Sam        | Roy       | Bhandup | Mumbai | Maharashtra | 400079 | 9865789625   | roySam@gmail.com      |
+|  3 | Karan      | Kapoor    | Kamti   | Nagpur | Maharashtra | 400050 | 9865885214   | kkaran@gmail.com      |
++----+------------+-----------+---------+--------+-------------+--------+--------------+-----------------------+
+3 rows in set (0.02 sec)
