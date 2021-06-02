@@ -1,4 +1,5 @@
 
+
 -------####--"Welcome to Address Book DataBase"--####---------------
 
 -----------------------------# UC1: #-------------------------------------
@@ -214,3 +215,30 @@ mysql> SELECT Phone_Number FROM AddressBookTables WHERE Type = 'Friends';
 | 8654885425   |
 +--------------+
 2 rows in set (0.00 sec)
+
+------------------------------------# UC11: #----------------------------------------------------------------------------
+mysql> CREATE TABLE Type
+    -> (
+    -> id               INT unsigned NOT NULL AUTO_INCREMENT,
+    -> Name             VARCHAR(100) NOT NULL,
+    -> Relationship     VARCHAR(100) NOT NULL,
+    -> PRIMARY KEY      (id)
+    -> );
+Query OK, 0 rows affected (2.02 sec)
+
+mysql> INSERT INTO Type (Name, Relationship) VALUES
+    -> ('Sachin', 'Brother'),
+    -> ('Sushil', 'Friend'),
+    -> ('Pankaj', 'Friend');
+Query OK, 3 rows affected (0.19 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM Type;
++----+--------+--------------+
+| id | Name   | Relationship |
++----+--------+--------------+
+|  1 | Sachin | Brother      |
+|  2 | Sushil | Friend       |
+|  3 | Pankaj | Friend       |
++----+--------+--------------+
+3 rows in set (0.00 sec)
